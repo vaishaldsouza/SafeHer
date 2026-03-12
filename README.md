@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# SafeHer – Hands-Free Emergency Alert System for Women's Safety
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**A Progressive Web App (PWA) that enables instant, voice-activated emergency alerts in public spaces – no unlocking phone required.**
 
-## Available Scripts
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18-blue)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-purple)](https://vitejs.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-10-orange)](https://firebase.google.com/)
 
-In the project directory, you can run:
+##  Problem Statement
 
-### `npm start`
+Women frequently face safety risks in public spaces (streets, public transport, neighbourhoods). In critical situations harassment, assault, or threat manually operating a smartphone (unlocking screen, opening app, pressing button) is often impossible due to panic, physical restraint, or time pressure.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Voice SOS** solves this by providing **hands-free, voice-triggered emergency communication** using a simple wake word/phrase (e.g. “Help”, “Bachao”, “SOS”).  
+Once triggered, the system instantly:
+- Captures current GPS location
+- Sends SMS with live location link to emergency contacts (and optionally police)
+- Starts silent audio recording for evidence
+- Optionally notifies family via push/email
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Mapped SDGs**  
+- **SDG 5** – Gender Equality  
+- **SDG 11** – Sustainable Cities and Communities  
+- **SDG 16** – Peace, Justice and Strong Institutions
 
-### `npm test`
+##  Key Features (MVP – Current)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Customizable wake words (English/Hindi support planned)  
+- Instant GPS location capture & Google Maps link generation  
+- SMS alerts to 3–5 emergency contacts via Twilio + Firebase  
+- Silent audio recording on trigger (stored in Firebase Storage)  
+- Progressive Web App (installable on Android/iOS home screen)  
+- Offline queuing of alerts when network is poor  
+- Privacy-first: all voice processing on-device (no audio sent to cloud)
 
-### `npm run build`
+##  Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Layer              | Technology                          | Purpose                              |
+|--------------------|-------------------------------------|--------------------------------------|
+| Frontend           | React + Vite                        | Fast development & PWA support       |
+| Voice Detection    | Picovoice Porcupine Web             | Lightweight, on-device wake-word     |
+| Microphone Access  | @picovoice/web-voice-processor      | Browser microphone streaming         |
+| Backend / Storage  | Firebase (Firestore + Storage)      | User data, contacts, recordings      |
+| SMS Delivery       | Twilio (via Firebase Extension)     | Reliable emergency messaging         |
+| Location           | Browser Geolocation API             | Real-time coordinates                |
+| Notifications      | Firebase Cloud Messaging (FCM)      | Optional family alerts               |
+| Deployment         | Firebase Hosting / Vercel / Netlify | Free & fast global CDN               |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Quick Start (Local Development)
 
-### `npm run eject`
+### Prerequisites
+- Node.js ≥ 18
+- npm / yarn / pnpm
+- Firebase project (console.firebase.google.com)
+- Picovoice Access Key (console.picovoice.ai – free for dev)
+- Twilio account & phone number (twilio.com – $15 free credit)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository
+   ```bash
+   git clone https://github.com/vaishaldsouza/SafeHer.git
+   cd SafeHer

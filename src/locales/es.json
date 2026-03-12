@@ -1,0 +1,61 @@
+{
+  "app_name": "SafeHer",
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "map": "Mapa",
+    "vehicle": "Vehículo"
+  },
+  "sos": {
+    "button": "SOS",
+    "voice": "SOS de Voz",
+    "alert": "¡Demostración de Emergencia Activada!",
+    "trigger": "ayuda",
+    "say": "Diga"
+  },
+  "features": {
+    "title": "Características de SafeHer",
+    "items": {
+      "sos": { "title": "Botón de Pánico SOS", "desc": "Alerta instantáneamente a tus contactos de confianza." },
+      "voice": { "title": "SOS activado por voz", "desc": "Diga 'Help' para enviar una alerta de emergencia." },
+      "offline": { "title": "SMS de emergencia fuera de línea", "desc": "Envía SOS incluso sin internet." },
+      "gps": { "title": "Detección de ubicación GPS", "desc": "Seguimiento de ubicación en tiempo real." },
+      "navigation": { "title": "Navegación de ruta segura", "desc": "Evite zonas propensas al crimen." },
+      "crime_alerts": { "title": "Alertas de zonas de crimen", "desc": "Recibe notificaciones al entrar en zonas inseguras." },
+      "vehicle_verify": { "title": "Verificación de vehículos", "desc": "Comprueba si un taxi/auto está registrado." },
+      "location_share": { "title": "Ubicación compartida en vivo", "desc": "Comparte tu viaje con contactos de confianza." }
+    }
+  },
+  "vehicle": {
+    "title": "Verificación de Vehículos",
+    "subtitle": "Compruebe si un taxi o auto está registrado para su seguridad",
+    "placeholder": "Ingrese el número del vehículo",
+    "button": "Verificar Vehículo",
+    "status": {
+      "empty": "Por favor ingrese un número de vehículo",
+      "registered": "✅ Vehículo registrado",
+      "unverified": "⚠️ Vehículo no verificado"
+    }
+  },
+  "hero": {
+    "title": "Empoderando la Seguridad de las Mujeres",
+    "subtitle": "Seguimiento en tiempo real, alertas SOS y navegación segura para cada viaje."
+  },
+  "sections": {
+    "map": "Mapa de Seguridad",
+    "vehicle": "Verificación de Vehículos"
+  },
+  "theme": {
+    "light": "Modo Claro",
+    "dark": "Modo Oscuro"
+  },
+  "language": {
+    "en": "Inglés",
+    "hi": "Hindi",
+    "kn": "Canarés",
+    "ta": "Tamil",
+    "te": "Telugu",
+    "es": "Español",
+    "fr": "Francés"
+  }
+}

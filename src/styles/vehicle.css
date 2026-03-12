@@ -1,32 +1,33 @@
 /* src/styles/vehicleCheck.css */
 .vehicle-card {
-  background-color: #0f172a;      /* dark card */
+  background-color: var(--card-bg);      /* theme card */
   padding: 40px;
   border-radius: 12px;
   max-width: 500px;
   margin: 0 auto;                 /* center the card */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
   text-align: center;
+  border: 1px solid var(--border-color);
 }
 
 .vehicle-card h3 {
   font-size: 24px;
-  color: #3b82f6;                 /* blue accent */
+  color: var(--accent);                 /* blue accent */
 }
 
 .vehicle-card p {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .vehicle-card input {
   padding: 10px 15px;
   border-radius: 8px;
-  border: 1px solid #1e293b;
-  background-color: #1e293b;
-  color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-size: 16px;
 }
 

@@ -1,0 +1,61 @@
+{
+  "app_name": "SafeHer",
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "map": "Carte",
+    "vehicle": "Véhicule"
+  },
+  "sos": {
+    "button": "SOS",
+    "voice": "SOS Vocal",
+    "alert": "Démo d'Urgence Déclenchée !",
+    "trigger": "aide",
+    "say": "Dites"
+  },
+  "features": {
+    "title": "Fonctionnalités de SafeHer",
+    "items": {
+      "sos": { "title": "Bouton Panique SOS", "desc": "Alertez instantanément vos contacts de confiance." },
+      "voice": { "title": "SOS à déclenchement vocal", "desc": "Dites 'Help' pour envoyer une alerte d'urgence." },
+      "offline": { "title": "SMS d'urgence hors ligne", "desc": "Envoyez un SOS même sans internet." },
+      "gps": { "title": "Détection de localisation GPS", "desc": "Suivi de localisation en temps réel." },
+      "navigation": { "title": "Navigation sur itinéraire sûr", "desc": "Évitez les zones à risque." },
+      "crime_alerts": { "title": "Alertes de zone de risque", "desc": "Recevez des notifications en entrant dans des zones peu sûres." },
+      "vehicle_verify": { "title": "Vérification du véhicule", "desc": "Vérifiez si un taxi/auto est enregistré." },
+      "location_share": { "title": "Partage de position en direct", "desc": "Partagez votre voyage avec des contacts de confiance." }
+    }
+  },
+  "vehicle": {
+    "title": "Vérification du Véhicule",
+    "subtitle": "Vérifiez si un taxi ou un auto est enregistré pour la sécurité",
+    "placeholder": "Entrez le numéro du véhicule",
+    "button": "Vérifier le Véhicule",
+    "status": {
+      "empty": "Veuillez entrer un numéro de véhicule",
+      "registered": "✅ Véhicule enregistré",
+      "unverified": "⚠️ Véhicule non vérifié"
+    }
+  },
+  "hero": {
+    "title": "Renforcer la Sécurité des Femmes",
+    "subtitle": "Suivi en temps réel, alertes SOS et navigation sûre pour chaque voyage."
+  },
+  "sections": {
+    "map": "Carte de Sécurité",
+    "vehicle": "Vérification du Véhicule"
+  },
+  "theme": {
+    "light": "Mode Clair",
+    "dark": "Mode Sombre"
+  },
+  "language": {
+    "en": "Anglais",
+    "hi": "Hindi",
+    "kn": "Kannada",
+    "ta": "Tamoul",
+    "te": "Télougou",
+    "es": "Espagnol",
+    "fr": "Français"
+  }
+}

@@ -1,0 +1,16 @@
+[
+  { "lat": 12.9716, "lng": 77.5946, "weight": 0.9, "label": "Bengaluru City Center" },
+  { "lat": 13.0184, "lng": 77.5734, "weight": 0.5, "label": "Nandi Hills" },
+  { "lat": 12.3072, "lng": 76.6413, "weight": 0.7, "label": "Mysuru" },
+  { "lat": 15.3647, "lng": 75.1240, "weight": 0.8, "label": "Hubballi" },
+  { "lat": 15.8497, "lng": 74.4977, "weight": 0.4, "label": "Belagavi" },
+  { "lat": 12.9141, "lng": 74.8560, "weight": 0.6, "label": "Mangaluru" },
+  { "lat": 17.3297, "lng": 76.8343, "weight": 0.6, "label": "Kalaburagi" },
+  { "lat": 14.4674, "lng": 75.9213, "weight": 0.3, "label": "Davanagere" },
+  { "lat": 13.3409, "lng": 74.7421, "weight": 0.2, "label": "Udupi" },
+  { "lat": 12.9345, "lng": 77.5855, "weight": 0.95, "label": "Risk Zone A" },
+  { "lat": 12.9600, "lng": 77.6100, "weight": 0.88, "label": "Risk Zone B" },
+  { "lat": 12.9100, "lng": 77.6200, "weight": 0.85, "label": "Risk Zone C" },
+  { "lat": 12.9500, "lng": 77.5800, "weight": 0.92, "label": "Risk Zone D" },
+  { "lat": 12.9800, "lng": 77.6000, "weight": 0.98, "label": "Risk Zone E" }
+]

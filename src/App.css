@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
@@ -16,6 +17,13 @@
   --border-bright: rgba(255, 255, 255, 0.15);
   --radius: 14px;
   --radius-lg: 22px;
+=======
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background: var(--bg-primary);
+color: var(--text-primary);
+>>>>>>> 9f163fe75ea1f4eb1221e3c7af1f64720b28f89f
 }
 
 *, *::before, *::after {
@@ -93,6 +101,7 @@ body::after {
   }
 }
 
+<<<<<<< HEAD
 @keyframes auroraShift2 {
   0%   {
     background:
@@ -413,4 +422,34 @@ section {
 @media (max-width: 768px) {
   section { padding: 60px 20px; }
   .voice-section { margin: 60px 20px; }
+=======
+/* FOOTER */
+
+.footer{
+margin-top:100px;
+padding:40px;
+background: var(--bg-secondary);
+text-align:center;
+opacity:0.8;
+}
+
+/* EMERGENCY MODE */
+
+.emergency-mode{
+background:linear-gradient(
+45deg,
+var(--bg-primary),
+#2b0000
+);
+}
+/* src/styles/app.css or global css */
+.section-wrapper {
+  padding: 80px 20px;   /* Space above and below section */
+  background-color: var(--card-bg); /* Slightly lighter dark bg for sections */
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;    /* Keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid var(--border-color);
+>>>>>>> 9f163fe75ea1f4eb1221e3c7af1f64720b28f89f
 }

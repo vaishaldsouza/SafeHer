@@ -1,0 +1,103 @@
+{
+  "app_name": "SafeHer",
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "map": "Map",
+    "vehicle": "Vehicle"
+  },
+  "sos": {
+    "button": "SOS",
+    "voice": "Voice SOS",
+    "alert": "Emergency Demo Triggered!",
+    "trigger": "help",
+    "say": "Say"
+  },
+  "features": {
+    "title": "SafeHer Features",
+    "items": {
+      "sos": { "title": "SOS Panic Button", "desc": "Instantly alert your trusted contacts." },
+      "voice": { "title": "Voice Trigger SOS", "desc": "Say 'Help' to send emergency alert." },
+      "offline": { "title": "Offline Emergency SMS", "desc": "Send SOS even without internet." },
+      "gps": { "title": "GPS Location Detection", "desc": "Real-time location tracking." },
+      "navigation": { "title": "Safe Route Navigation", "desc": "Avoid crime-prone areas." },
+      "crime_alerts": { "title": "Crime Zone Alerts", "desc": "Get notified entering unsafe zones." },
+      "vehicle_verify": { "title": "Vehicle Verification", "desc": "Check if a taxi/auto is registered." },
+      "location_share": { "title": "Live Location Sharing", "desc": "Share travel with trusted contacts." }
+    }
+  },
+  "vehicle": {
+    "title": "Vehicle Verification",
+    "subtitle": "Check if a taxi or auto is registered for safety",
+    "placeholder": "Enter Vehicle Number",
+    "button": "Check Vehicle",
+    "status": {
+      "empty": "Please enter a vehicle number",
+      "registered": "✅ Registered vehicle",
+      "unverified": "⚠️ Vehicle not verified"
+    }
+  },
+  "hero": {
+    "title": "Empowering Women's Safety",
+    "subtitle": "Real-time tracking, SOS alerts, and safe navigation for every journey."
+  },
+  "sections": {
+    "map": "Safety Map",
+    "vehicle": "Vehicle Verification"
+  },
+  "map": {
+    "destination_placeholder": "Search for a destination",
+    "find_path": "Find Safe Path",
+    "show_heatmap": "Crime Heatmap",
+    "safety_score": "Area Safety",
+    "walking": "Walk",
+    "driving": "Drive",
+    "long_distance": "Distance too long for walking. Switch to driving?",
+    "route_error": "Could not find a path to that destination.",
+    "loading": "Loading Map...",
+    "heatmap_active": "Crime Heatmap Active"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "language": {
+    "en": "English",
+    "hi": "Hindi",
+    "kn": "Kannada",
+    "ta": "Tamil",
+    "te": "Telugu",
+    "es": "Spanish",
+    "fr": "French"
+  },
+  "auth": {
+    "login": "Sign In",
+    "signup": "Sign Up",
+    "email": "Email Address",
+    "password": "Password",
+    "name": "Full Name",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "welcome": "Welcome Back",
+    "join": "Join SafeHer",
+    "login_desc": "Safeguarding your journeys with every sign-in.",
+    "signup_desc": "Start your journey towards absolute safety.",
+    "forgot_password": "Forgot Password?",
+    "reset_password": "Reset Password",
+    "forgot_desc": "Enter your email to receive a password reset link.",
+    "back_to_login": "Back to Login",
+    "reset_link_sent": "If an account exists for this email, a reset link will be sent shortly."
+  },
+  "liveshare": {
+    "title": "Live Location Sharing",
+    "subtitle": "Keep your loved ones updated on your journey in real-time.",
+    "start": "Start Sharing",
+    "stop": "Stop Sharing",
+    "share_via": "Share via",
+    "msg": "I am traveling. Follow my live location on SafeHer: ",
+    "active": "Location Sharing Active",
+    "inactive": "Not Sharing",
+    "copied": "Link copied to clipboard!",
+    "copy": "Copy Link"
+  }
+}

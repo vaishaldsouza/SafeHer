@@ -1,28 +1,31 @@
 import React from "react";
 import "../styles/features.css";
-
-const featuresData = [
-  { title: "SOS Panic Button", color: "red", description: "Instantly alert your trusted contacts." },
-  { title: "Voice Trigger SOS", color: "red", description: "Say 'Help' to send emergency alert." },
-  { title: "Offline Emergency SMS", color: "green", description: "Send SOS even without internet." },
-  { title: "GPS Location Detection", color: "green", description: "Real-time location tracking." },
-  { title: "Safe Route Navigation", color: "blue", description: "Avoid crime-prone areas." },
-  { title: "Crime Zone Alerts", color: "blue", description: "Get notified entering unsafe zones." },
-  { title: "Vehicle Verification", color: "blue", description: "Check if a taxi/auto is registered." },
-  { title: "Live Location Sharing", color: "purple", description: "Share travel with trusted contacts." },
-];
+import { useTranslation } from "react-i18next";
 
 function Features() {
+  const { t } = useTranslation();
+
+  const featuresData = [
+    { title: t('features.items.sos.title'), color: "red", description: t('features.items.sos.desc') },
+    { title: t('features.items.voice.title'), color: "red", description: t('features.items.voice.desc') },
+    { title: t('features.items.offline.title'), color: "green", description: t('features.items.offline.desc') },
+    { title: t('features.items.gps.title'), color: "green", description: t('features.items.gps.desc') },
+    { title: t('features.items.navigation.title'), color: "blue", description: t('features.items.navigation.desc') },
+    { title: t('features.items.crime_alerts.title'), color: "blue", description: t('features.items.crime_alerts.desc') },
+    { title: t('features.items.vehicle_verify.title'), color: "blue", description: t('features.items.vehicle_verify.desc') },
+    { title: t('features.items.location_share.title'), color: "purple", description: t('features.items.location_share.desc') },
+  ];
+
   const handleClick = (title) => {
     alert(`Feature clicked: ${title}`);
   };
 
   return (
     <section className="features-section" id="features">
-      <h2>SafeHer Features</h2>
+      <h2>{t('features.title')}</h2>
       <div
         className="features-grid"
-        style={{ gridTemplateColumns: "repeat(4, 1fr)" }} // Force 4 cards per row
+        style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }} // More responsive grid
       >
         {featuresData.map((feature, index) => (
           <div
