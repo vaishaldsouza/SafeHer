@@ -1,0 +1,44 @@
+{
+  "CrimeZones": [
+
+    
+    { "id": 1,  "name": "MG Road",             "lat": 12.9756, "lng": 77.6099, "risk": "medium", "radius": 400, "city": "Bangalore", "description": "Busy commercial area, pickpocketing reported" },
+    { "id": 2,  "name": "Majestic Bus Stand",   "lat": 12.9775, "lng": 77.5713, "risk": "high",   "radius": 500, "city": "Bangalore", "description": "High crowd density, frequent chain snatching" },
+    { "id": 3,  "name": "KR Market",            "lat": 12.9616, "lng": 77.5763, "risk": "high",   "radius": 450, "city": "Bangalore", "description": "Theft and harassment cases reported" },
+    { "id": 4,  "name": "Chickpete",            "lat": 12.9652, "lng": 77.5750, "risk": "high",   "radius": 400, "city": "Bangalore", "description": "Crowded narrow lanes, high risk at night" },
+    { "id": 5,  "name": "Bommanahalli",         "lat": 12.9060, "lng": 77.6218, "risk": "high",   "radius": 400, "city": "Bangalore", "description": "Multiple harassment cases reported" },
+    { "id": 6,  "name": "Nagarbhavi",           "lat": 12.9590, "lng": 77.5100, "risk": "high",   "radius": 400, "city": "Bangalore", "description": "Isolated stretches, avoid late night" },
+    { "id": 7,  "name": "Silk Board Junction",  "lat": 12.9175, "lng": 77.6229, "risk": "high",   "radius": 500, "city": "Bangalore", "description": "High risk due to traffic and isolation at night" },
+    { "id": 8,  "name": "Shivajinagar",         "lat": 12.9850, "lng": 77.6010, "risk": "medium", "radius": 350, "city": "Bangalore", "description": "Moderate risk, stay alert at night" },
+    { "id": 9,  "name": "Yeshwanthpur",         "lat": 13.0275, "lng": 77.5523, "risk": "medium", "radius": 400, "city": "Bangalore", "description": "Reported incidents near railway station" },
+    { "id": 10, "name": "BTM Layout",           "lat": 12.9166, "lng": 77.6101, "risk": "medium", "radius": 350, "city": "Bangalore", "description": "Night time incidents near main road" },
+    { "id": 11, "name": "Marathahalli",         "lat": 12.9591, "lng": 77.6971, "risk": "medium", "radius": 400, "city": "Bangalore", "description": "Traffic congestion leads to safety risks" },
+    { "id": 12, "name": "Electronic City",      "lat": 12.8399, "lng": 77.6770, "risk": "medium", "radius": 400, "city": "Bangalore", "description": "Late night travel risk on highway" },
+    { "id": 13, "name": "Koramangala",          "lat": 12.9352, "lng": 77.6245, "risk": "low",    "radius": 350, "city": "Bangalore", "description": "Safe area, occasional vehicle theft" },
+    { "id": 14, "name": "Indiranagar",          "lat": 12.9784, "lng": 77.6408, "risk": "low",    "radius": 300, "city": "Bangalore", "description": "Safe locality, stay alert after midnight" },
+    { "id": 15, "name": "Jayanagar",            "lat": 12.9308, "lng": 77.5830, "risk": "low",    "radius": 300, "city": "Bangalore", "description": "Residential, low crime zone" },
+
+    
+    { "id": 16, "name": "Vamanjoor",            "lat": 12.8540, "lng": 74.9120, "risk": "medium", "radius": 400, "city": "Mangaluru", "description": "Isolated road stretches, caution after dark" },
+    { "id": 17, "name": "Mangaluru City Centre","lat": 12.8698, "lng": 74.8426, "risk": "medium", "radius": 450, "city": "Mangaluru", "description": "Busy market area, stay alert for pickpockets" },
+    { "id": 18, "name": "Hampankatta",          "lat": 12.8672, "lng": 74.8432, "risk": "high",   "radius": 400, "city": "Mangaluru", "description": "Crowded commercial zone, frequent chain snatching reported" },
+    { "id": 19, "name": "Bunder",               "lat": 12.8714, "lng": 74.8395, "risk": "high",   "radius": 380, "city": "Mangaluru", "description": "Port area with isolated stretches, avoid at night" },
+    { "id": 20, "name": "Mangaluru Bus Stand",  "lat": 12.8681, "lng": 74.8436, "risk": "high",   "radius": 420, "city": "Mangaluru", "description": "High footfall area, theft and harassment reported" },
+    { "id": 21, "name": "Kankanady",            "lat": 12.8780, "lng": 74.8530, "risk": "medium", "radius": 350, "city": "Mangaluru", "description": "Moderate risk near hospital and market area" },
+    { "id": 22, "name": "Bejai",                "lat": 12.8760, "lng": 74.8410, "risk": "medium", "radius": 320, "city": "Mangaluru", "description": "Some incidents reported near isolated lanes" },
+    { "id": 23, "name": "Urwa",                 "lat": 12.8820, "lng": 74.8360, "risk": "medium", "radius": 340, "city": "Mangaluru", "description": "Stay alert near market and late-night spots" },
+    { "id": 24, "name": "Kadri",                "lat": 12.8870, "lng": 74.8460, "risk": "low",    "radius": 300, "city": "Mangaluru", "description": "Mostly residential, generally safe area" },
+    { "id": 25, "name": "Attavar",              "lat": 12.8720, "lng": 74.8490, "risk": "low",    "radius": 280, "city": "Mangaluru", "description": "Low crime rate, good street lighting" },
+    { "id": 26, "name": "Derebail",             "lat": 12.8950, "lng": 74.8550, "risk": "medium", "radius": 350, "city": "Mangaluru", "description": "Moderate risk, some isolated stretches" },
+    { "id": 27, "name": "Kuloor",               "lat": 12.8810, "lng": 74.8620, "risk": "medium", "radius": 360, "city": "Mangaluru", "description": "Ferry junction area, caution during night hours" },
+    { "id": 28, "name": "Konchady",             "lat": 12.8900, "lng": 74.8700, "risk": "low",    "radius": 300, "city": "Mangaluru", "description": "Quiet residential area, generally safe" },
+    { "id": 29, "name": "Bondel",               "lat": 12.8830, "lng": 74.8800, "risk": "low",    "radius": 300, "city": "Mangaluru", "description": "Mostly safe, minor incidents near highway" },
+    { "id": 30, "name": "Mangaluru Railway Station", "lat": 12.8638, "lng": 74.8405, "risk": "high", "radius": 450, "city": "Mangaluru", "description": "High footfall, chain snatching and theft frequently reported" },
+    { "id": 31, "name": "Bikarnakatte",         "lat": 12.8590, "lng": 74.9050, "risk": "medium", "radius": 380, "city": "Mangaluru", "description": "Outskirts area with poorly lit stretches at night" },
+    { "id": 32, "name": "Pumpwell",             "lat": 12.8610, "lng": 74.9000, "risk": "medium", "radius": 360, "city": "Mangaluru", "description": "Heavy traffic junction, moderate risk" },
+    { "id": 33, "name": "Padil",                "lat": 12.8490, "lng": 74.9200, "risk": "low",    "radius": 300, "city": "Mangaluru", "description": "Residential suburb near Vamanjoor, generally safe" },
+    { "id": 34, "name": "Bajpe",                "lat": 12.9060, "lng": 74.9010, "risk": "medium", "radius": 400, "city": "Mangaluru", "description": "Airport road area, caution during late night travel" },
+    { "id": 35, "name": "Surathkal",            "lat": 13.0143, "lng": 74.7906, "risk": "low",    "radius": 350, "city": "Mangaluru", "description": "NITK area, generally safe with good patrolling" }
+
+  ]
+}

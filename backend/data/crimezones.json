@@ -1,0 +1,20 @@
+[
+  { "lat": 12.9716, "lng": 77.5946, "type": "Murder - For gain" },
+  { "lat": 12.9750, "lng": 77.5960, "type": "Murder - Over Property Dispute" },
+  { "lat": 12.9730, "lng": 77.5930, "type": "Murder - Personal Vendetta" },
+  { "lat": 12.9700, "lng": 77.5920, "type": "Assault - Minor Injury" },
+  { "lat": 12.9690, "lng": 77.5950, "type": "Robbery - Street Theft" },
+  { "lat": 12.9720, "lng": 77.5970, "type": "Theft - Shoplifting" },
+  { "lat": 12.9685, "lng": 77.5980, "type": "Burglary - House Break" },
+  { "lat": 12.9745, "lng": 77.5910, "type": "Cyber Crime - Fraud" },
+  { "lat": 12.9705, "lng": 77.5905, "type": "Assault - Serious Injury" },
+  { "lat": 12.9760, "lng": 77.5935, "type": "Robbery - Vehicle Theft" },
+  { "lat": 12.9710, "lng": 77.5990, "type": "Theft - Pickpocketing" },
+  { "lat": 12.9680, "lng": 77.5925, "type": "Burglary - Office Break" },
+  { "lat": 12.9735, "lng": 77.5965, "type": "Cyber Crime - Phishing" },
+  { "lat": 12.9695, "lng": 77.5940, "type": "Assault - Harassment" },
+  { "lat": 12.9725, "lng": 77.5920, "type": "Robbery - Snatching" },
+  { "lat": 12.9708, "lng": 77.5975, "type": "Theft - Pickpocketing" },
+  { "lat": 12.9755, "lng": 77.5955, "type": "Murder - Over Property Dispute" },
+  { "lat": 12.9688, "lng": 77.5932, "type": "Burglary - House Break" }
+]

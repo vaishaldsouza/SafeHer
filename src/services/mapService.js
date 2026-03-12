@@ -2,11 +2,11 @@
 const mapService = {
   getCrimeZones: async () => {
     try {
-      const res = await fetch("http://localhost:5000/crimezones"); // backend endpoint
-      const data = await res.json();
-      return data; // array of {lat, lng, type}
+      const res = await fetch("http://localhost:5000/crimeZones");
+      const data = await res.json(); // [{lat, lng, type}, ...]
+      return data;
     } catch (err) {
-      console.log("Error fetching crime zones:", err);
+      console.error("Failed to fetch crime zones:", err);
       return [];
     }
   },

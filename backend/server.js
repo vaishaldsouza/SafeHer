@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
+
 const fs = require("fs");
 const path = require("path");
 
@@ -10,7 +10,7 @@ const contactsService = require("./services/contactsService");
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 const PORT = 5000;
 

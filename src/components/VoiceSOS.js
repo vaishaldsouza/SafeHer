@@ -1,36 +1,34 @@
-import React from "react";
-import "../styles/sos.css";
+// src/components/VoiceSOS.js
+import React, { useEffect } from "react";
 
-function VoiceSOS({triggerSOS}){
+const VoiceSOS = ({ triggerSOS }) => {
+  useEffect(() => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
 
-const startVoice=()=>{
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.lang = "en-US";
 
-const rec=new window.webkitSpeechRecognition();
+    recognition.onresult = (event) => {
+      const transcript = event.results[event.results.length - 1][0].transcript.trim().toLowerCase();
+      console.log("Voice detected:", transcript);
+      if (transcript.includes("help") || transcript.includes("sos")) {
+        triggerSOS();
+        alert("Voice SOS triggered!");
+      }
+    };
 
-rec.start();
+    recognition.start();
+    return () => recognition.stop();
+  }, [triggerSOS]);
 
-rec.onresult=(e)=>{
-
-const text=e.results[0][0].transcript;
-
-if(text.toLowerCase().includes("help")){
-triggerSOS();
-}
-
-}
-
-}
-
-return(
-
-<button className="voice-btn" onClick={startVoice}>
-
-🎤 Voice SOS
-
-</button>
-
-)
-
-}
+  return (
+    <div style={{ textAlign: "center", margin: "20px" }}>
+      <p>Say “Help” to trigger SOS</p>
+    </div>
+  );
+};
 
 export default VoiceSOS;

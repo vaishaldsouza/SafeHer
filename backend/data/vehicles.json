@@ -1,0 +1,22 @@
+[
+  { "number": "KA01AB1234", "type": "Taxi", "registered": true },
+  { "number": "KA02XY5678", "type": "Auto", "registered": true },
+  { "number": "KA03CD9012", "type": "Taxi", "registered": false },
+  { "number": "KA04EF3456", "type": "Auto", "registered": true },
+  { "number": "KA05GH7890", "type": "Taxi", "registered": true },
+  { "number": "KA06IJ1234", "type": "Auto", "registered": false },
+  { "number": "KA07KL5678", "type": "Taxi", "registered": true },
+  { "number": "KA08MN9012", "type": "Auto", "registered": true },
+  { "number": "KA09OP3456", "type": "Taxi", "registered": false },
+  { "number": "KA10QR7890", "type": "Auto", "registered": true },
+  { "number": "KA11ST1234", "type": "Taxi", "registered": true },
+  { "number": "KA12UV5678", "type": "Auto", "registered": true },
+  { "number": "KA13WX9012", "type": "Taxi", "registered": false },
+  { "number": "KA14YZ3456", "type": "Auto", "registered": true },
+  { "number": "KA15AB7890", "type": "Taxi", "registered": true },
+  { "number": "KA16CD1234", "type": "Auto", "registered": false },
+  { "number": "KA17EF5678", "type": "Taxi", "registered": true },
+  { "number": "KA18GH9012", "type": "Auto", "registered": true },
+  { "number": "KA19IJ3456", "type": "Taxi", "registered": true },
+  { "number": "KA20KL7890", "type": "Auto", "registered": false }
+]
