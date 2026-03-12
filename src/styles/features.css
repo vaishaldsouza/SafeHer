@@ -1,0 +1,37 @@
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.feature-card{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #1e293b;
+}
+
+.feature-card:hover{
+transform:translateY(-6px);
+}
+
+.feature-card h3{
+margin-bottom:10px;
+}
+
+.feature-card.red{
+border-left:5px solid #ff2d2d;
+}
+
+.feature-card.green{
+border-left:5px solid #16a34a;
+}
+
+.feature-card.blue{
+border-left:5px solid #3b82f6;
+}
+
+.feature-card.purple{
+border-left:5px solid #a855f7;
+}

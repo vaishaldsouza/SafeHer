@@ -1,0 +1,23 @@
+.monitor{
+text-align:center;
+}
+
+.monitor-cards{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.monitor-card{
+background:#0f172a;
+padding:40px;
+border-radius:12px;
+width:200px;
+border:1px solid #1e293b;
+transition:0.3s;
+}
+
+.monitor-card:hover{
+transform:translateY(-6px);
+}
