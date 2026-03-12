@@ -1,29 +1,51 @@
-.vehicle-section{
-text-align:center;
+/* src/styles/vehicleCheck.css */
+.vehicle-card {
+  background-color: #0f172a;      /* dark card */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;                 /* center the card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
 }
 
-.vehicle-section input{
-padding:14px;
-width:300px;
-border-radius:8px;
-border:none;
-margin-right:10px;
+.vehicle-card h3 {
+  font-size: 24px;
+  color: #3b82f6;                 /* blue accent */
 }
 
-.vehicle-section button{
-padding:14px 24px;
-background:#3b82f6;
-border:none;
-border-radius:8px;
-color:white;
-cursor:pointer;
+.vehicle-card p {
+  color: #ffffff;
 }
 
-.vehicle-section button:hover{
-background:#2563eb;
+.vehicle-card input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  background-color: #1e293b;
+  color: #fff;
+  font-size: 16px;
 }
 
-.vehicle-section p{
-margin-top:20px;
-font-size:18px;
+.vehicle-card button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.vehicle-card button:hover {
+  background-color: #2563eb;
+}
+
+.vehicle-card .status {
+  font-weight: bold;
+  margin-top: 10px;
 }

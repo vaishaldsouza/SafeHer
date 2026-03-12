@@ -1,43 +1,36 @@
-import React,{useState} from "react";
+// src/components/VehicleCheck.js
+import React, { useState } from "react";
 import "../styles/vehicle.css";
 
-function VehicleCheck(){
+function VehicleCheck() {
+  const [vehicleNumber, setVehicleNumber] = useState("");
+  const [status, setStatus] = useState(null);
 
-const [vehicle,setVehicle]=useState("");
-const [result,setResult]=useState("");
+  const handleCheck = () => {
+    // Dummy check logic (replace with API call)
+    if (vehicleNumber.trim() === "") {
+      setStatus("Please enter a vehicle number");
+    } else if (vehicleNumber.toUpperCase().startsWith("KA")) {
+      setStatus("✅ Registered vehicle");
+    } else {
+      setStatus("⚠️ Vehicle not verified");
+    }
+  };
 
-const verifyVehicle=()=>{
-
-if(vehicle==="KA01AB1234"){
-setResult("Registered Vehicle");
-}
-else{
-setResult("Vehicle Not Found");
-}
-
-}
-
-return(
-
-<section id="vehicle" className="vehicle-section">
-
-<h2>Vehicle Verification</h2>
-
-<input
-placeholder="Enter Taxi / Auto Number"
-onChange={(e)=>setVehicle(e.target.value)}
-/>
-
-<button onClick={verifyVehicle}>
-Check Vehicle
-</button>
-
-<p>{result}</p>
-
-</section>
-
-)
-
+  return (
+    <div className="vehicle-card">
+      <h3>Vehicle Verification</h3>
+      <p>Check if a taxi or auto is registered for safety</p>
+      <input
+        type="text"
+        placeholder="Enter Vehicle Number"
+        value={vehicleNumber}
+        onChange={(e) => setVehicleNumber(e.target.value)}
+      />
+      <button onClick={handleCheck}>Check Vehicle</button>
+      {status && <p className="status">{status}</p>}
+    </div>
+  );
 }
 
 export default VehicleCheck;

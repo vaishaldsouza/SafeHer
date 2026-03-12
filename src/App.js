@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./styles/App.css";
+// src/App.js
+import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
@@ -7,68 +7,87 @@ import SafetyMap from "./components/SafetyMap";
 import VehicleCheck from "./components/VehicleCheck";
 import VoiceSOS from "./components/VoiceSOS";
 import SOSButton from "./components/SOSButton";
-import Monitoring from "./components/Monitoring";
-import TripMonitor from "./components/TripMonitor";
-import NetworkStatus from "./components/NetworkStatus";
 import { sendSOS } from "./services/sosService";
 
 function App() {
+  // Default location (e.g., Bangalore)
+  const [userLocation, setUserLocation] = useState({ lat: 12.9716, lng: 77.5946 });
+  const [contacts, setContacts] = useState(["+1234567890"]); // emergency contacts
 
-  const [sosActive, setSosActive] = useState(false);
-  const [safetyScore, setSafetyScore] = useState(82);
+  // Get user GPS location
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          });
+        },
+        (err) => console.log("Location error:", err)
+      );
+    }
+  }, []);
 
-  const triggerSOS = () => {
-    const location = "User GPS Location";
-    sendSOS(location);
-    setSosActive(true);
-    alert("🚨 Emergency SOS Activated!");
-    setTimeout(() => setSosActive(false), 5000);
-  };
+  // Offline SOS listener: send pending SOS alerts when back online
+  useEffect(() => {
+    const sendPendingSOS = async () => {
+      const pendingSOS = JSON.parse(localStorage.getItem("pendingSOS")) || [];
+      if (pendingSOS.length > 0) {
+        for (let sos of pendingSOS) {
+          try {
+            await fetch("http://localhost:5000/sos", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(sos),
+            });
+          } catch (err) {
+            console.log("Still offline:", err);
+            return; // stop if still offline
+          }
+        }
+        localStorage.removeItem("pendingSOS");
+        alert("Pending SOS alerts sent successfully!");
+      }
+    };
 
-  const simulateEmergency = () => {
-    setSafetyScore(25);
-    triggerSOS();
+    window.addEventListener("online", sendPendingSOS);
+    return () => window.removeEventListener("online", sendPendingSOS);
+  }, []);
+
+  // Trigger SOS manually (from button or voice)
+  const handleSOS = () => {
+    sendSOS(contacts, userLocation);
   };
 
   return (
-    <div className={`App ${sosActive ? "emergency-mode" : ""}`}>
+    <div className="App">
+  <Navbar />
 
-      <NetworkStatus />
-      <Navbar />
-      <Hero />
-      <Features />
+  {/* Hero / Landing */}
+  <Hero id="home" />
 
-      <section className="safety-score">
-        <h2>Area Safety Score</h2>
-        <div className="score-circle">{safetyScore}%</div>
-        <p>{safetyScore > 70 ? "🟢 Safe" : safetyScore > 40 ? "🟡 Moderate Risk" : "🔴 High Risk"}</p>
-      </section>
+  {/* Features */}
+  <Features id="features" />
 
-      <SafetyMap />
-      <VehicleCheck />
+  {/* Safety Map Section */}
+  <section id="map" className="section-wrapper">
+    <h2 style={{ color: "#fff", marginBottom: "20px" }}>Safety Map</h2>
+    <SafetyMap userLocation={userLocation} />
+  </section>
 
-      <div className="voice-section">
-        <h2>Voice Emergency Trigger</h2>
-        <VoiceSOS triggerSOS={triggerSOS} />
-      </div>
+  {/* Vehicle Verification Section */}
+  <section id="vehicle" className="section-wrapper">
+    <h2 style={{ color: "#fff", marginBottom: "20px" }}>Vehicle Verification</h2>
+    <VehicleCheck />
+  </section>
 
-      <Monitoring />
-      <TripMonitor />
+  {/* Voice SOS */}
+  <VoiceSOS triggerSOS={handleSOS} />
 
-      <div className="demo-section">
-        <button className="demo-btn" onClick={simulateEmergency}>
-          Simulate Emergency
-        </button>
-      </div>
-
-      <SOSButton triggerSOS={triggerSOS} />
-
-      <footer className="footer">
-        <h3>SafeHer</h3>
-        <p>Smart Women Safety Platform combining SOS alerts, crime awareness, vehicle verification, and offline emergency communication.</p>
-        <p>© 2026 SafeHer Project</p>
-      </footer>
-    </div>
+  {/* SOS Button */}
+  <SOSButton triggerSOS={handleSOS} />
+</div>
   );
 }
 

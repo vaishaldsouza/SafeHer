@@ -67,3 +67,39 @@ background:linear-gradient(
 #2b0000
 );
 }
+/* src/styles/app.css or global css */
+.section-wrapper {
+  padding: 80px 20px;   /* Space above and below section */
+  background-color: #1e293b; /* Slightly lighter dark bg for sections */
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;    /* Keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+/* src/styles/app.css or global css */
+.section-wrapper {
+  padding: 80px 20px;             /* space above & below */
+  background-color: #1e293b;      /* dark background */
+  border-radius: 12px;
+  margin: 40px auto;              /* spacing between sections */
+  max-width: 1200px;              /* keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+/* src/styles/app.css or global css */
+.section-wrapper {
+  padding: 80px 20px;             /* space above & below */
+  background-color: #1e293b;      /* dark background */
+  border-radius: 12px;
+  margin: 40px auto;              /* spacing between sections */
+  max-width: 1200px;              /* keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+/* src/styles/app.css */
+.section-wrapper {
+  padding: 80px 20px;             /* space above & below each section */
+  background-color: #1e293b;      /* slightly lighter dark background */
+  border-radius: 12px;            /* rounded corners */
+  margin: 40px auto;              /* spacing between sections */
+  max-width: 1200px;              /* keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* subtle shadow */
+}

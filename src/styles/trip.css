@@ -1,0 +1,46 @@
+.trip-monitor {
+  text-align: center;
+  margin: 60px 20px;
+}
+
+.trip-monitor h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.start-trip,
+.end-trip {
+  padding: 14px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.start-trip {
+  background-color: #16a34a; /* Green for start */
+}
+
+.start-trip:hover {
+  background-color: #15803d;
+}
+
+.end-trip {
+  background-color: #ff2d2d; /* Red for end */
+}
+
+.end-trip:hover {
+  background-color: #b91c1c;
+}
+
+.trip-active {
+  background-color: #0f172a;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  margin: auto;
+  border: 1px solid #1e293b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}

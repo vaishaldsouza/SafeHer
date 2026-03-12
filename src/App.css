@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background:#020617;
+color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* SAFETY SCORE */
+
+.safety-score{
+text-align:center;
+margin:80px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.score-circle{
+width:160px;
+height:160px;
+border-radius:50%;
+border:6px solid #3b82f6;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:20px auto;
+font-size:40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* VOICE SECTION */
+
+.voice-section{
+text-align:center;
+margin-top:60px;
 }
 
-.App-link {
-  color: #61dafb;
+/* DEMO BUTTON */
+
+.demo-section{
+text-align:center;
+margin:60px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.demo-btn{
+padding:14px 28px;
+background:#ff2d2d;
+border:none;
+border-radius:8px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:100px;
+padding:40px;
+background:#020617;
+text-align:center;
+opacity:0.8;
+}
+
+/* EMERGENCY MODE */
+
+.emergency-mode{
+background:linear-gradient(
+45deg,
+#020617,
+#2b0000
+);
+}
+/* src/styles/app.css or global css */
+.section-wrapper {
+  padding: 80px 20px;   /* Space above and below section */
+  background-color: #1e293b; /* Slightly lighter dark bg for sections */
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 1200px;    /* Keep content centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
