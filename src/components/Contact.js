@@ -36,7 +36,7 @@ function Contact() {
     if (userName) localStorage.setItem(USERNAME_KEY, userName);
   }, [userName]);
 
-  const validatePhone = (p) => /^[+]?[\d\s\-]{10,15}$/.test(p.trim());
+  const validatePhone = (p) => /^[+]?[\d\s-]{10,15}$/.test(p.trim());
 
   const addContact = () => {
     setError("");
