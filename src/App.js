@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
+import FakeCall from "./components/FakeCall";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import SafetyMap from "./components/SafetyMap";
@@ -10,12 +11,19 @@ import SOSButton from "./components/SOSButton";
 import Monitoring from "./components/Monitoring";
 import TripMonitor from "./components/TripMonitor";
 import NetworkStatus from "./components/NetworkStatus";
+import Contact from "./components/Contact";
 import { sendSOS } from "./services/sosService";
+import { initOfflineListener } from "./services/offlineService";
 
 function App() {
 
-  const [sosActive, setSosActive] = useState(false);
+  const [sosActive,   setSosActive]   = useState(false);
   const [safetyScore, setSafetyScore] = useState(82);
+  const voiceRef = useRef(null);
+
+  useEffect(() => {
+    initOfflineListener();
+  }, []);
 
   const triggerSOS = () => {
     const location = "User GPS Location";
@@ -23,6 +31,15 @@ function App() {
     setSosActive(true);
     alert("🚨 Emergency SOS Activated!");
     setTimeout(() => setSosActive(false), 5000);
+  };
+
+  const triggerVoice = () => {
+    // scrolls to voice section and auto-clicks the button
+    const voiceSection = document.querySelector(".voice-section");
+    voiceSection?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      voiceRef.current?.click();
+    }, 800);
   };
 
   const simulateEmergency = () => {
@@ -35,8 +52,8 @@ function App() {
 
       <NetworkStatus />
       <Navbar />
-      <Hero />
-      <Features />
+      <Hero triggerSOS={triggerSOS} />
+      <Features triggerSOS={triggerSOS} triggerVoice={triggerVoice} />
 
       <section className="safety-score">
         <h2>Area Safety Score</h2>
@@ -45,15 +62,19 @@ function App() {
       </section>
 
       <SafetyMap />
-      <VehicleCheck />
+      <div id="vehicle">
+        <VehicleCheck />
+      </div>
 
       <div className="voice-section">
         <h2>Voice Emergency Trigger</h2>
-        <VoiceSOS triggerSOS={triggerSOS} />
+        <VoiceSOS triggerSOS={triggerSOS} ref={voiceRef} />
       </div>
 
       <Monitoring />
+      <FakeCall />
       <TripMonitor />
+      <Contact />
 
       <div className="demo-section">
         <button className="demo-btn" onClick={simulateEmergency}>
@@ -68,6 +89,7 @@ function App() {
         <p>Smart Women Safety Platform combining SOS alerts, crime awareness, vehicle verification, and offline emergency communication.</p>
         <p>© 2026 SafeHer Project</p>
       </footer>
+
     </div>
   );
 }

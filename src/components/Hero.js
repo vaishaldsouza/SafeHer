@@ -1,36 +1,24 @@
 import React from "react";
 import "../styles/hero.css";
+import VoiceSOS from "./VoiceSOS";
 
-function Hero(){
+function Hero({ triggerSOS }) {
+  return (
+    <section className="hero">
 
-return(
+      <h1>SafeHer</h1>
 
-<section className="hero">
+      <p>
+        A smart women safety platform with SOS alerts, crime zone detection,
+        safe route navigation and vehicle verification.
+      </p>
 
-<h1>SafeHer</h1>
+      <div className="hero-buttons">
+        <VoiceSOS triggerSOS={triggerSOS} />
+      </div>
 
-<p>
-Smart Women Safety Platform with
-Voice SOS, Offline Alerts,
-Safe Navigation and Vehicle Verification
-</p>
-
-<div className="hero-buttons">
-
-<button className="btn-primary">
-🚨 Emergency Demo
-</button>
-
-<button className="btn-secondary">
-Explore Features
-</button>
-
-</div>
-
-</section>
-
-)
-
+    </section>
+  );
 }
 
 export default Hero;

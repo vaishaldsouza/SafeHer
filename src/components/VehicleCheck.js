@@ -1,43 +1,62 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "../styles/vehicle.css";
 
-function VehicleCheck(){
+function VehicleCheck() {
 
-const [vehicle,setVehicle]=useState("");
-const [result,setResult]=useState("");
+  const [vehicle, setVehicle] = useState("");
+  const [result, setResult] = useState("");
 
-const verifyVehicle=()=>{
+  const checkVehicle = () => {
+    if (vehicle === "KA01AB1234") {
+      setResult("verified");
+    } else {
+      setResult("notfound");
+    }
+  };
 
-if(vehicle==="KA01AB1234"){
-setResult("Registered Vehicle");
-}
-else{
-setResult("Vehicle Not Found");
-}
+  return (
+    <section id="vehicle" className="vehicle-section">
 
-}
+      <h2>Vehicle Verification</h2>
+      <p>Check if a taxi is authentic before starting your trip</p>
 
-return(
+      <div className="vehicle-card">
 
-<section id="vehicle" className="vehicle-section">
+        <div className="vehicle-input-wrap">
+          <span className="input-icon">🚗</span>
+          <input
+            placeholder="Enter vehicle number (e.g. KA01AB1234)"
+            value={vehicle}
+            onChange={(e) => setVehicle(e.target.value.toUpperCase())}
+          />
+        </div>
 
-<h2>Vehicle Verification</h2>
+        <button onClick={checkVehicle}>
+          Check Vehicle
+        </button>
 
-<input
-placeholder="Enter Taxi / Auto Number"
-onChange={(e)=>setVehicle(e.target.value)}
-/>
+        {result === "verified" && (
+          <p className="vehicle-result success">
+            ✅ Verified Taxi — This vehicle is registered and authentic.
+          </p>
+        )}
 
-<button onClick={verifyVehicle}>
-Check Vehicle
-</button>
+        {result === "notfound" && (
+          <p className="vehicle-result error">
+            ❌ Vehicle Not Found — This number is not in our records.
+          </p>
+        )}
 
-<p>{result}</p>
+        {result === "" && (
+          <p className="vehicle-result empty">
+            Enter a vehicle number above to verify.
+          </p>
+        )}
 
-</section>
+      </div>
 
-)
-
+    </section>
+  );
 }
 
 export default VehicleCheck;

@@ -1,21 +1,20 @@
 import React from "react";
 import "../styles/sos.css";
 
-function SOSButton({triggerSOS}){
+function SOSButton({ triggerSOS }) {
+  return (
+    <div id="sos" className="sos-section">
 
-return(
+      <h2>Emergency SOS</h2>
 
-<button
-className="sos-float"
-onClick={triggerSOS}
->
+      <button className="sos-button" onClick={triggerSOS}>
+        🚨 SOS
+      </button>
 
-🚨 SOS
+      <p>Press this button in case of emergency.</p>
 
-</button>
-
-)
-
+    </div>
+  );
 }
 
 export default SOSButton;

@@ -1,0 +1,22 @@
+{
+  "vehicles": [
+    {
+      "number": "KA01AB1234",
+      "driver": "Ramesh",
+      "service": "Ola",
+      "status": "verified"
+    },
+    {
+      "number": "KA02CD5678",
+      "driver": "Suresh",
+      "service": "Uber",
+      "status": "verified"
+    },
+    {
+      "number": "KA03EF1111",
+      "driver": "Unknown",
+      "service": "Unknown",
+      "status": "not_verified"
+    }
+  ]
+}

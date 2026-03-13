@@ -1,0 +1,503 @@
+/* ─── FAKE CALL DASHBOARD CARD ─── */
+.fakecall-card {
+  max-width: 560px;
+  margin: 0 auto 40px;
+  background: rgba(13, 31, 56, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 22px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  animation: fakecardBorder 6s ease-in-out infinite;
+}
+
+@keyframes fakecardBorder {
+  0%, 100% { border-color: rgba(0,230,118,0.2);  box-shadow: 0 0 20px rgba(0,230,118,0.06); }
+  50%       { border-color: rgba(41,121,255,0.2); box-shadow: 0 0 20px rgba(41,121,255,0.06); }
+}
+
+.fakecall-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.fakecall-card-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.fakecall-card-top h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f0f4ff;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.fakecall-card-top p {
+  font-size: 0.85rem;
+  color: #7b9abd;
+  line-height: 1.5;
+}
+
+/* ─── CALLER SELECTOR ─── */
+.fakecall-callers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.fakecall-caller-btn {
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  color: #7b9abd;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fakecall-caller-btn:hover {
+  border-color: rgba(0,230,118,0.3);
+  color: #f0f4ff;
+}
+
+.fakecall-caller-btn.active {
+  background: rgba(0,230,118,0.1);
+  border-color: rgba(0,230,118,0.4);
+  color: #00e676;
+  box-shadow: 0 0 12px rgba(0,230,118,0.2);
+}
+
+/* ─── CUSTOM INPUTS ─── */
+.fakecall-custom-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.fakecall-custom-inputs input {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  color: #f0f4ff;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.fakecall-custom-inputs input::placeholder { color: #4a6580; }
+.fakecall-custom-inputs input:focus {
+  border-color: rgba(41,121,255,0.4);
+  background: rgba(41,121,255,0.04);
+}
+
+/* ─── DELAY SELECTOR ─── */
+.fakecall-delay {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.fakecall-delay span {
+  font-size: 0.82rem;
+  color: #7b9abd;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fakecall-delay-btn {
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  color: #7b9abd;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fakecall-delay-btn.active {
+  background: rgba(41,121,255,0.12);
+  border-color: rgba(41,121,255,0.4);
+  color: #82b1ff;
+}
+
+/* ─── TRIGGER BUTTON ─── */
+.fakecall-trigger-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00e676, #2979ff, #00e676);
+  background-size: 200% 100%;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: transform 0.25s ease;
+  animation: triggerBtnFlow 4s linear infinite;
+}
+
+@keyframes triggerBtnFlow {
+  0%   { background-position: 0% 50%;   box-shadow: 0 6px 20px rgba(0,230,118,0.4); }
+  50%  { background-position: 100% 50%; box-shadow: 0 6px 20px rgba(41,121,255,0.4); }
+  100% { background-position: 0% 50%;   box-shadow: 0 6px 20px rgba(0,230,118,0.4); }
+}
+
+.fakecall-trigger-btn:hover { transform: translateY(-2px) scale(1.02); }
+
+/* ─── COUNTDOWN ─── */
+.fakecall-countdown-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.fakecall-countdown {
+  flex: 1;
+  padding: 13px;
+  background: rgba(250,204,21,0.08);
+  border: 1px solid rgba(250,204,21,0.3);
+  border-radius: 14px;
+  color: #fde047;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  animation: countdownPulse 1s ease-in-out infinite;
+}
+
+@keyframes countdownPulse {
+  0%, 100% { box-shadow: none; }
+  50%       { box-shadow: 0 0 16px rgba(250,204,21,0.3); }
+}
+
+.fakecall-cancel-btn {
+  padding: 13px 20px;
+  background: rgba(255,23,68,0.1);
+  border: 1px solid rgba(255,23,68,0.3);
+  border-radius: 14px;
+  color: #ff6090;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fakecall-cancel-btn:hover {
+  background: rgba(255,23,68,0.2);
+}
+
+/* ════════════════════════════════════════
+   FULL SCREEN CALL OVERLAY
+════════════════════════════════════════ */
+.fakecall-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px 32px 56px;
+  background: #0a0f1a;
+  animation: overlayIn 0.4s ease;
+  overflow: hidden;
+}
+
+.fakecall-overlay.active {
+  background: #060c18;
+}
+
+.fakecall-overlay.ended {
+  background: #050a14;
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Background glow circles */
+.fakecall-bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.15;
+}
+
+.fakecall-bg-circle.c1 {
+  width: 400px; height: 400px;
+  background: #00e676;
+  top: -100px; left: -100px;
+  animation: bgCircle1 8s ease-in-out infinite alternate;
+}
+
+.fakecall-bg-circle.c2 {
+  width: 350px; height: 350px;
+  background: #2979ff;
+  bottom: -100px; right: -80px;
+  animation: bgCircle2 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgCircle1 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(60px, 40px); }
+}
+
+@keyframes bgCircle2 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(-40px, -60px); }
+}
+
+/* ─── TOP SECTION ─── */
+.fakecall-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.fakecall-status-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Avatar */
+.fakecall-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0,230,118,0.2), rgba(41,121,255,0.2));
+  border: 2px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin-bottom: 4px;
+  position: relative;
+}
+
+.fakecall-avatar.vibrate {
+  animation: avatarVibrate 0.4s ease-in-out infinite;
+}
+
+@keyframes avatarVibrate {
+  0%, 100% { transform: rotate(0deg); }
+  20%       { transform: rotate(-3deg); }
+  40%       { transform: rotate(3deg); }
+  60%       { transform: rotate(-2deg); }
+  80%       { transform: rotate(2deg); }
+}
+
+.fakecall-caller-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-top: 4px;
+}
+
+.fakecall-caller-number {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Ripple rings */
+.fakecall-ripple-wrap {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  pointer-events: none;
+}
+
+.fakecall-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 230, 118, 0.4);
+  animation: rippleExpand 2s ease-out infinite;
+}
+
+.fakecall-ripple.r2 { animation-delay: 0.6s; }
+.fakecall-ripple.r3 { animation-delay: 1.2s; }
+
+@keyframes rippleExpand {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+/* ─── ACTIONS ─── */
+.fakecall-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Extra buttons (silence, message, remind) */
+.fakecall-extra-btns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.fakecall-extra-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.fakecall-extra-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.fakecall-extra-btn span {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.02em;
+}
+
+/* Main accept/decline buttons */
+.fakecall-main-btns {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.fakecall-btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.fakecall-btn-wrap span {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
+}
+
+.fakecall-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fakecall-btn.accept {
+  background: #00c853;
+  box-shadow: 0 6px 24px rgba(0,200,83,0.5);
+  animation: acceptPulse 1.5s ease-in-out infinite;
+}
+
+.fakecall-btn.decline {
+  background: #ff1744;
+  box-shadow: 0 6px 24px rgba(255,23,68,0.5);
+  transform: rotate(135deg);
+}
+
+.fakecall-btn:hover { transform: scale(1.1); }
+.fakecall-btn.decline:hover { transform: rotate(135deg) scale(1.1); }
+
+@keyframes acceptPulse {
+  0%, 100% { box-shadow: 0 6px 24px rgba(0,200,83,0.5); }
+  50%       { box-shadow: 0 6px 36px rgba(0,200,83,0.8); transform: scale(1.06); }
+}
+
+/* Active call buttons */
+.fakecall-active-btns {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.fakecall-active-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.fakecall-active-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.fakecall-active-btn span {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.fakecall-ended-text {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .fakecall-overlay { padding: 50px 24px 44px; }
+  .fakecall-caller-name { font-size: 1.8rem; }
+  .fakecall-main-btns { gap: 60px; }
+  .fakecall-extra-btns { gap: 24px; }
+}
